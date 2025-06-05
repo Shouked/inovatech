@@ -43,7 +43,7 @@ const CTASection = () => {
   };
 
   return (
-    <section id="contato" className="pt-12 sm:pt-16 md:pt-20 pb-20 bg-gradient-to-r from-[#0D121F] to-[#161C2C] text-white">
+    <section id="contato" className="pt-10 sm:pt-16 md:pt-20 pb-20 bg-gradient-to-r from-[#0D121F] to-[#161C2C] text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
