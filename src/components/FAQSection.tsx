@@ -44,7 +44,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="pt-8 sm:pt-14 md:pt-20 pb-20 bg-gray-50">
+    <section className="pt-6 sm:pt-14 md:pt-20 pb-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
