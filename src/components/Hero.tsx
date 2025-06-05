@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import React from 'react';
+import React from "react";
 
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
   if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+    element.scrollIntoView({ behavior: "smooth" });
   }
 };
 
@@ -52,11 +52,11 @@ export function AdaptedHeroSection({
       id="inicio"
       className={cn(
         "bg-gradient-to-br from-slate-50 via-white to-blue-100 text-foreground",
-        "py-10 sm:py-12 md:py-16 px-4",
+        "pt-24 pb-10 sm:pt-28 sm:pb-12 md:pt-16 md:pb-16 px-4",
         "overflow-hidden"
       )}
     >
-      <div className="mx-auto flex max-w-container flex-col gap-12 pt-6 sm:gap-16 md:gap-20">
+      <div className="mx-auto flex max-w-container flex-col gap-12 sm:gap-16 md:gap-20">
         <div className="flex flex-col items-center gap-6 text-center sm:gap-8 md:gap-10">
           {badge && (
             <motion.div
@@ -64,11 +64,20 @@ export function AdaptedHeroSection({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <Badge variant="outline" className="gap-2 border-blue-300 text-blue-700">
+              <Badge
+                variant="outline"
+                className="gap-2 border-blue-300 text-blue-700"
+              >
                 <span className="font-semibold">{badge.text}</span>
                 {badge.action && (
                   <button
-                    onClick={() => badge.action.hrefId ? scrollToSection(badge.action.hrefId) : (badge.action.hrefUrl ? window.open(badge.action.hrefUrl, '_blank') : undefined)}
+                    onClick={() =>
+                      badge.action.hrefId
+                        ? scrollToSection(badge.action.hrefId)
+                        : badge.action.hrefUrl
+                        ? window.open(badge.action.hrefUrl, "_blank")
+                        : undefined
+                    }
                     className="flex items-center gap-1 hover:underline"
                   >
                     {badge.action.text}
@@ -108,7 +117,13 @@ export function AdaptedHeroSection({
                 key={index}
                 variant={action.variant || "default"}
                 size="lg"
-                onClick={() => action.hrefId ? scrollToSection(action.hrefId) : (action.hrefUrl ? window.open(action.hrefUrl, '_blank') : undefined)}
+                onClick={() =>
+                  action.hrefId
+                    ? scrollToSection(action.hrefId)
+                    : action.hrefUrl
+                    ? window.open(action.hrefUrl, "_blank")
+                    : undefined
+                }
                 className="min-w-[180px] py-3 px-6 text-base"
               >
                 {action.icon && <span className="mr-2">{action.icon}</span>}
@@ -140,15 +155,13 @@ export function AdaptedHeroSection({
 const Hero = () => {
   const userTitle = (
     <>
-      Soluções Empresariais em{' '}
-      <span className="text-blue-600">
-        Inteligência Artificial
-      </span>
-      {' '}& Desenvolvimento de Software
+      Soluções Empresariais em{" "}
+      <span className="text-blue-600">Inteligência Artificial</span>{" "}
+      & Desenvolvimento de Software
     </>
   );
 
-  const userDescription = 
+  const userDescription =
     "Transformamos processos empresariais com agentes de IA inteligentes, " +
     "sistemas personalizados e automação avançada para empresas que buscam excelência operacional.";
 
@@ -171,7 +184,7 @@ const Hero = () => {
     action: {
       text: "Saiba Mais",
       hrefId: "servicos",
-    }
+    },
   };
 
   return (
