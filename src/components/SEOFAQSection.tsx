@@ -64,7 +64,7 @@ const SEOFAQSection = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-gray-50">
+    <section id="faq" className="pt-4 sm:pt-10 md:pt-20 pb-20 bg-gray-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
