@@ -26,7 +26,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="sobre" className="py-20 bg-white">
+    <section id="sobre" className="pt-10 sm:pt-14 md:pt-20 pb-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
